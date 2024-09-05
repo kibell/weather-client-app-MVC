@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Weather Client App</title>
+  </head>
+  <body>
+    <h1>Weather Data</h1>
+    <form action="/weather" method="get">
+      <label for="lat">Latitude:</label>
+      <input type="text" id="lat" name="lat" value="38.8977" />
+      <label for="lon">Longitude:</label>
+      <input type="text" id="lon" name="lon" value="-77.0365" />
+      <button type="submit">Get Weather</button>
+    </form>
+    <p th:text="${weatherData}">Weather data will be here!</p>
+  </body>
+</html>
